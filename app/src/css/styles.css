@@ -1,0 +1,25 @@
+@import './modules/_colors.css';
+
+@define-mixin small {
+  @media screen and (min-width: 200px) {
+    color: red;
+  }
+}
+
+body {
+  @mixin small;
+
+  display: flex;
+  justify-content: center;
+}
+
+.menu {
+  &__nano: {
+    width: calc(4 * $column);
+  }
+}
+
+.menu_link {
+  background: $blue;
+  width: $column;
+}
